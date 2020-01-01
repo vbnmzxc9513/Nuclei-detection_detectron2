@@ -1,7 +1,7 @@
 # Nuclei-detection
   
   
-  
+  refrence from https://github.com/facebookresearch/detectron2 and git clone it in repository
   
   
   
