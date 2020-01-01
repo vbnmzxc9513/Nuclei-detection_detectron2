@@ -225,6 +225,7 @@ Please build and install detectron2 following the instructions above.
 
 ### Download files
 From https://www.kaggle.com/c/data-science-bowl-2018/data download all the file.
+#### note that .py file were formatted, but ipynb files were leave them as original form to prevent breaking the structure ####
 After unzip renamed stage1_train folder named train_folder, and renamed stage2_test folder named test-folder.
 You may need to put the training file in root directory of your detectron2's installation path:
 ```
