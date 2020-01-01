@@ -14,7 +14,7 @@ inpath = "./train_folder/"  # the train folder download from kaggle
 outpath = "./train/"  # the folder putting all nuclei image
 
 images_name = listdir(inpath)
-cocoformat = {"images":[], "annotations":[], "categories":[]}
+cocoformat = {"licenses":[], "info":[], "images":[], "annotations":[], "categories":[]}
 
 
 # categories
