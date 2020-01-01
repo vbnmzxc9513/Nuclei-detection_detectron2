@@ -241,14 +241,45 @@ Detectron2
 +- test_folder
 +- To_Cocoformat_and_moveImg.ipynb	
 +- submission_and_visualize.ipynb
-+= train_Cascade.py
++- train_Cascade.py
 ```
+### Dataset Preprocessing ###
+To let the file can be used by our code, a prior dataset preprocessing may be requied.
+First, running following command:
+```
+jupyter notebook
+```
+The browser would open a web page where you can execute the ipynb files.
+Find the "To_Cocoformat_and_moveImg.ipynb" file and execute it.
+
+To prepare the training data, simply execute all the cells.
+After preparing training data, change the input path and output path into:
+```
+inpath = "./test_folder/"
+outpath = "./test/"
+```
+Then, run through all the cell except 2nd, 3rd and 4th cell to finish the data preprocessing.
+Here we provide a structure visualization to explain what change on folder strcture would be made:
 
 ## Folder before Processing
 ![image](https://github.com/vbnmzxc9513/Nuclei-detection/blob/master/demo/trainfolder_before.png)
 ## Folder after Processing
 ![image](https://github.com/vbnmzxc9513/Nuclei-detection/blob/master/demo/trainfolder_after.png)
 
+
+## Train models
+To train models, run following commands.
+```
+python train_Cascade.py
+```
+After training, it may generate a folder named "output", with weight file named (iteration_count).pth
+
+## Make Submission
+After training, from jupyter notebook, execute "submission_and_visualize.ipynb"
+Simply run through all the cell and the result would be generate.
+
+## Demo Prediction Result
 ![image](https://github.com/vbnmzxc9513/Nuclei-detection/blob/master/demo/demo.png)
 
-  Refrence : https://github.com/facebookresearch/detectron2   
+## Reference  
+Refrence : https://github.com/facebookresearch/detectron2   
