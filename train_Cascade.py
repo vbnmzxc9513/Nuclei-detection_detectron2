@@ -18,13 +18,13 @@ from detectron2.data.datasets import register_coco_instances
 from detectron2.engine import DefaultTrainer
 from detectron2.config import get_cfg
 
-register_coco_instances("my_dataset", {}, "flip_annotation.json", "./train_augmentation_flip")
+register_coco_instances("my_dataset", {}, "nucleus_cocoformat.json", "./train")
 metadata = MetadataCatalog.get("my_dataset")
 dataset_dicts = DatasetCatalog.get("my_dataset")
 
 cfg = get_cfg()
 cfg.merge_from_file("./model/mask_rcnn_R_50_FPN_3x.yaml")
-cfg.OUTPUT_DIR = "./output_augment_flip"
+cfg.OUTPUT_DIR = "./output"
 #cfg.MODEL.WEIGHTS = os.path.join('model', "model_final_Cascade.pkl")  # if you have pre-trained weight.
 cfg.DATASETS.TRAIN = ("my_dataset",)
 cfg.DATASETS.TEST = ()   # no metrics implemented for this dataset
