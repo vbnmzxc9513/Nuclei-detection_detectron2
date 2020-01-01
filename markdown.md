@@ -1,5 +1,5 @@
 ## train_Cascade.py :  
-use ```python train_Cascade.py``` In begining, choose your path for .yaml to load model config and modify some parameter for train, then load pretrain weight. After loading configuration, starting trainging. If finish, you can get model weight in your output directory.  
+In begining, choose your path for .yaml to load model config and modify some parameter for train, then load pretrain weight. After loading configuration, starting trainging. Use ```python train_Cascade.py```.   If finish, you can get model weight in your output directory.  
 
 ## To_Cocoformat_and_move_image.ipynb :  
 Demo notebook for convert cocoformat, use it to convert your mask data label. It transform the binary mask image to ploy point like (x y x y x y ......) by contour edges in the image. And move the kaggle dataset images to one selected folder.  
