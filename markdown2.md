@@ -9,17 +9,17 @@ train_Cascade.py is the file we use for training. In this file, you are going to
 * After training, the weight will store in output file.
 
 To_Cocoformat_and_move_image.ipynb. 
-1. (first cell) inpath set the folder name which download from kaggle. outpath set the folder name you want to store image. You should set the name to train folder and run all folder. Next set the variable to test folder name and run all whithout 2, 3, 4 cells.
-2. (forth cell) you can set your JSON name yourself.
+1. (1 cell) inpath set the folder name which download from kaggle. outpath set the folder name you want to store image. You should set the name to train folder and run all folder. Next set the variable to test folder name and run all whithout 2, 3, 4 cells.
+2. (4 cell) you can set your JSON name yourself.
 
 data_augmentation.ipynb
-1. (third cell) build the folder to save your augmentation images.
-2. (eighth cell) set the input folder path including the images which we want to augmentation.
-3. (tenth cell) set output name which you have built in third cell.
-4. () choice the item you want to augmentation and run augmentor.applyAugmentation() to start.
+1. (3 cell) build the folder to save your augmentation images.
+2. (8 cell) set the input folder path including the images which we want to augmentation.
+3. (10 cell) set output name which you have built in third cell.
+4. (above) choice the item you want to augmentation and run augmentor.applyAugmentation() to start.
 * After augmentor.applyAugmentation() the augmentation will finish.
 
 submission_and_visualize.ipynb
-1.
-2.
-3.
+1. (3 cell) load data set and register it for detectron2 dataset. RLE function for decode. Then you should adjust the config data for model configuration. You should load the correct model weight and model config with .yaml file. 
+2. (1 cell) You can select one image file for prediction your testdata.
+3. (2 cell) Predict the test data and write for submission with all predict weight, the weight should in the out direction. Due to Kaggle competition evaluation, we resolve the predict overlap problem by the postprocess_masks function.  
